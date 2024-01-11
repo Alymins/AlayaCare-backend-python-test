@@ -1,16 +1,6 @@
-Alayacare Python skill test
-===========================
+# Alayacare Python Skill Test - CRUD TODO
 
-
-### Application
-The TODO App allows a user to add reminders of thing he needs to do. Here are the requirement for the app.
-* Users can add, delete and see their todos.
-* All the todos are private, users can't see other user's todos.
-* Users must be logged in order to add/delete/see their todos.
-
-Credentials:
-* username: **user1**
-* password: **user1**
+Este projeto é uma implementação do desafio da Alayacare, que consiste em criar um CRUD TODO em Python.
 
 #### Homepage:
 ![Homepage](/web/img/homepage.png?raw=true "Homepage")
@@ -21,70 +11,32 @@ Credentials:
 #### Todos:
 ![Todos](/web/img/todos.png?raw=true "Todos")
 
-### Requirements
-* python 5.7
-* virtualenv
-* sqlite3
-* A github account
+## Introdução
 
-### Installation
-**/!\ You need to fork this repository. See [How to submit your work?](#how-to-submit-your-work)**
-```sh
-virtualenv .
-bin/pip install -r requirements.txt
-bin/python main.py initdb
-bin/python main.py
-```
+O desafio proposto pela Alayacare envolve a criação de um aplicativo de gerenciamento de tarefas (TODO) em Python. Neste projeto, você encontrará uma implementação completa desse CRUD TODO, seguindo as diretrizes fornecidas pela empresa.
 
-### Instructions
+## Instruções e Tarefas
 
-You will be asked to improve the code of this app with the following tasks.
+O desafio inclui várias tarefas para melhorar o código do aplicativo. Aqui estão algumas delas:
 
-You can complete the tasks in any order.
+- **TASK 1**: Como usuário, não posso adicionar um TODO sem uma descrição.
+- **TASK 2**: Como usuário, posso marcar um TODO como concluído.
+  - Escreva um script de migração de banco de dados em `resources/`.
+- **TASK 3**: Como usuário, posso visualizar um TODO em formato JSON.
+  - Ex: /todo/{id}/json => {id: 1, user_id: 1, description: "Lorem Ipsum"}
+- **TASK 4**: Como usuário, posso ver uma mensagem de confirmação ao adicionar/excluir um TODO.
+- **TASK 5**: Como usuário, posso ver minha lista de TODOs paginada.
+- **TASK 6**: Implementar uma camada de acesso ao banco de dados ORM para evitar SQL no código do controlador.
 
-Separate your commits by task and use the following format for your commit messages: TASK-{task number}: {meaningful message}
+## Como Executar o Projeto
 
-### Tasks
-* TASK 1: As a user I can't add a todo without a description.
-* TASK 2: As a user I can mark a todo as completed.
-    - Write a database migration script in `resources/`
-* TASK 3: As a user I can view a todo in a JSON format.
-    - Ex: /todo/{id}/json => {id: 1, user_id: 1, description: "Lorem Ipsum"}
-* TASK 4: As a user I can see a confirmation message when I add/delete a todo.
-* TASK 5: As a user I can see my list of todos paginated.
-* TASK 6: Implement an ORM database access layer so we don’t have SQL in the controller code.
+Siga os passos abaixo para executar localmente:
 
-Extra tasks:
-- Fix any bug you may find.
-- Fix any security issue you may find.
+1. Clone este repositório.
+2. Crie um ambiente virtual usando o virtualenv.
+3. Instale as dependências usando `pip install -r requirements.txt`.
+4. Execute o script de inicialização do banco de dados: `python main.py initdb`.
+5. Inicie o aplicativo: `python main.py`.
+6. Acesse a aplicação no navegador utilizando as credenciais fornecidas.
 
-
-### Documentation
-This app use [Flask](http://flask.pocoo.org/docs/0.10/).
-
-
-### How to submit your work?
-
-1. ##### First you need to fork this repository.
-![Forking a repo](/web/img/fork.png?raw=true "Forking a repo")
-
-2. ##### Then clone your fork locally.
-![Cloning a repo](/web/img/clone.png?raw=true "Cloning a repo")
-
-3. ##### Install the app locally. See the [Installation Guide] (#Installation).
-
-4. ##### Once you've completed your work, you can submit a pull-request to the remote repository.
-![ a Pull Request](/web/img/pull-request.png?raw=true "Creating a Pull Request")
-
-5. ##### Review your changes and validate.
-![Validating a Pull Request](/web/img/pull-request-review.png?raw=true "Validating a Pull Request")
-
-
-
-And you're done!
-
-
-More documentation on Github:
-* https://help.github.com/articles/fork-a-repo/
-* https://help.github.com/articles/using-pull-requests/
-
+Observação: Certifique-se de ter o Python, virtualenv e sqlite3 instalados.
